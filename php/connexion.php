@@ -7,7 +7,8 @@ if(isset($_POST['submit']))
     {
         $login = $_POST['login'];
         $password= $_POST['password'];
-        $bd = mysqli_connect("localhost","root","","moduleconnexion");
+//        $bd = mysqli_connect("localhost","root","","moduleconnexion");
+        $bd = mysqli_connect("localhost:3306","Gabriel","ViveLeDev","gabriel-rigaud_moduleconnexion");
         $requete = mysqli_query($bd, "SELECT login, password FROM `utilisateurs` WHERE login='$login' ");
 
         //on va utiliser num_rows pour verifier que l'utilisateur existe

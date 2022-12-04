@@ -15,7 +15,8 @@ if(isset($_POST['submit']))
             //hachage du password
             $password3 = password_hash($password, PASSWORD_BCRYPT, array('cost' =>10 ));
 
-            $connexion = mysqli_connect("localhost","root","","moduleconnexion") or die('erreur');
+//            $connexion = mysqli_connect("localhost","root","","moduleconnexion") or die('erreur');
+            $connexion = mysqli_connect("localhost:3306","Gabriel","ViveLeDev","gabriel-rigaud_moduleconnexion") or die('erreur');
             $reget = ("SELECT * FROM utilisateurs WHERE login='$login' ");
             $regetx = mysqli_query($connexion, $reget);
             $row = mysqli_num_rows($regetx);

@@ -7,7 +7,8 @@ if(!isset($_SESSION['admin']))
     exit();
 }
 
-else $connexion = mysqli_connect('localhost', 'root', '', 'moduleconnexion');
+//else $connexion = mysqli_connect('localhost', 'root', '', 'moduleconnexion');
+else $connexion = mysqli_connect("localhost:3306","Gabriel","ViveLeDev","gabriel-rigaud_moduleconnexion");
     $requete = 'SELECT * FROM utilisateurs';
     $query = mysqli_query($connexion, $requete);
 
